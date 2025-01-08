@@ -1,3 +1,3 @@
 
-Este es un proyecto de ejemplo con su respectivo repositorio.
+Este es un proyecto parcial con su respectivo repositorio.
 Nuevo cambio agregado.
