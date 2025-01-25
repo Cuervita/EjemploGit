@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h2>1. Formulario de comentarios</h2>
+    <form action="aqui_se_envia_el_formulario.php" method="POST" target="_blank">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="comments">Comentarios:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>2.Registro de membresia</h2>
+    <form action="/register" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="birthdate">Fecha de nacimiento:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br>
+        <label>Género:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Masculino</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Femenino</label>
+        <br>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>3. Formulario de busqueda</h2>
+    <form>
+        <label for="query">Buscar:</label>
+        <input type="text" id="query" name="query" placeholder="Escribe lo que quieras buscar aquí" title="Tu busquedda"
+        required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h2>4. Encuesta de opinion</h2>
+    <form>
+        <p>¿Como evaluas nuestra atencion?</p>
+        
+        <input type="radio" id="excellent" name="opinion" value="excellent" required>
+        <label for="excellent">Excelente</label>
+
+        
+        <input type="radio" id="good" name="opinion" value="good">
+        <label for="good">Bueno</label>
+
+        
+        <input type="radio" id="poor" name="opinion" value="poor">
+        <label for="poor">Malo</label>
+
+        <br>
+        <label for="suggestions">Sugerencias:</label><br>
+        <textarea id="suggestions" name="suggestions" cols="30" rows="4"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>5. Formulario para donaciones</h2>
+    <form action="/donate" method="POST">
+        <label for="amount">Selecciona la cantidad que quieres donar:</label>
+        
+        <select id="donacion" name="donacion" required>
+            <option value="10">$5</option>
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$30</option>
+            <option value="10">$40</option>
+            <option value="10">$50</option>
+            <option value="10">$100</option>
+            <option value="10">$500</option>
+        </select>
+        <br>
+        <button type="submit">Donar</button>
+    </form>
+
+    <h2>6. Registro de actividades</h2>
+    <form action="/activities" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label>Selecciona las actividades que vas a realizar:</label><br>
+        <input type="checkbox" id="yoga" name="activities" value="yoga">
+        <label for="yoga">Yoga</label><br>
+        <input type="checkbox" id="running" name="activities" value="running">
+        <label for="running">Correr</label><br>
+        <input type="checkbox" id="swimming" name="activities" value="swimming">
+        <label for="swimming">Natación</label>
+        
+        <label for="parkour"><br>
+            <input type="checkbox" id="Parkour" name="activities" value="parkour">Parkour
+        </label><br>
+        
+        <br>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>7. Registro de cursos</h2>
+    <form action="/register-courses" method="POST">
+        <label for="student-name">Nombre del estudiante:</label>
+        <input type="text" id="student-name" name="student-name" required>
+        <br><br>
+        <label>Cursos disponibles:</label><br>
+        <input type="checkbox" id="math" name="courses" value="math">
+        <label for="math">Matemáticas</label><br>
+        <input type="checkbox" id="science" name="courses" value="science">
+        <label for="science">Ciencias</label><br>
+        <input type="checkbox" id="history" name="courses" value="history">
+        <label for="history">Historia</label>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>8. Reservacion de restaurantes</h2>
+    <form action="/reservation" method="POST">
+        <label for="date">Fecha de reservacion:</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <label for="guests">Número de personas:</label>
+        <input type="number" id="guests" name="guests" min="1" max="25" step="1" required>
+        <br>
+        <button type="submit">Reservar</button>
+    </form>
+
+    <h2>9. Formulario de suscripcion a un curso</h2>
+    <form action="/subscribe-course" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="course">Curso:</label>
+        <select id="course" name="course" required>
+            <option value="">Ninguno</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <br>
+        <label for="comments">Comentarios:</label>
+        <textarea id="comments" name="comments" cols="80" rows="5" maxlength="300"
+        title="Maximo 300 palabras." placeholder="Ingresa los motivos de tu eleccion." required></textarea>
+        <br>
+        <button type="submit">Suscribirse</button>
+    </form>
+
+    <h2>10. Formulario de feedback</h2>
+    <form action="/feedback" method="POST">
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="rating">Calificación:</label>
+        <select id="rating" name="rating" required>
+            <option value="">Selecciona una opción</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br>
+        <label for="comments">Comentarios:</label><br>
+        <textarea id="comments" name="comments" cols="100" rows="4"></textarea>
+        <br>
+        <button type="submit">Enviar Feedback</button>
+    </form>
+
+
+</body>
+</html>
