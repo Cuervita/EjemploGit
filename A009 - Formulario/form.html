@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1 id="inicio">Ejercicios de formularios</h1>
+    </header>
+
+    <nav>
+        <ol>
+            <li><a href="#f1">Crear un formulario basico</a></li>
+            <li><a href="#f2">Formulario para registro de usuario</a></li>
+            <li><a href="#f3">Encuesta de preferencias</a></li>
+            <li><a href="#f4">Validar numeros telefonicos</a></li>
+            <li><a href="#f5">Subida de archivos</a></li>
+            <li><a href="#f6">Personalizacion con colores</a></li>
+            <li><a href="#f7">Reservacion de citas</a></li>
+            <li><a href="#f8">Formulario de ingreso al sistema</a></li>
+            <li><a href="#f9">Registro de eventos</a></li>
+            <li><a href="#f10">Formulario para comentarios</a></li>
+        </ol>
+    </nav>
+
+    <div>
+        <h2>Crear un formulario basico</h2>
+        <form id="f1" name="contacto_basico">
+            <label id="etiqueta_nombre" for="nombre">Nombre(s): </label>
+            <input type="text" id="nombre" name="nombre" size="30" title="Ingresa tu nombre completo" required><br>
+            
+            <label>Apellido paterno: </label>
+            <input id="apellido_paterno" name="apellido_paterno" type="text" size="30"><br>
+
+            <label>Apellido materno: </label>
+            <input id="apellido_materno" name="apellido_materno" type="text" size="30"><br>
+            
+            <label id="etiqueta_email" for="email">Email: </label>
+            <input type="email" id="email" name="email" size="30" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+            title="Tu correo debe contener un @ y terminar con un nombre de dominio (por ejemplo .com o .es)"><br>
+            <br>
+            <label for="comentario">Comentarios: </label><br>
+            <textarea id="comentario" name="comentario" rows="10" cols="110" placeholder="Deja tu comentario."></textarea><br>
+        </form>
+    </div>
+    <br><hr><br>
+    <div>
+        <h2>Formulario para registro de usuario</h2>
+        <form id="f2">
+            <label id="etiqueta_nombre_usuario" for="nombre_usuario"> Nombre de usuario: </label>
+            <input id="nombre_usuario" size="25" maxlength="30" title="El nombre con el que deseas registrar tu cuenta de usuario."
+            name="nombre_usuario" minlength="5" placeholder="Introduce un nombre de usuario." required ><br>
+
+            <label id="etiqueta_password" for="password">Contrasena:</label>
+            <input type="password" id="password" name="password"
+            pattern="^(?=.*[A-Z])(?=.*\d).+$" 
+            minlength="8" size="25"
+            placeholder="Introduce una contrasena."
+            title="Debe contener al menos una mayuscula y un numero." required>
+            <br>
+            <label id="etiqueta_confirm_password" for="confirm_password">Confirma tu contrasena:</label>
+            <input type="password" id="confirm_password" name="confirm_password" 
+            pattern=".{8},"
+            autocomplete="off" size="25" placeholder="Repite tu contrasena."
+            title="Las contrasenas deben coincidir">
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Encuesta de preferencias</h2>
+        <form id="f3">
+            <label for="menu_pais" id="etiqueta_pais" name="etiqueta_pais">Pais: </label>
+            <select id="menu_pais" name="menu_pais">
+                <option>Banglades</option>
+                <option>Brasil</option>
+                <option>China</option>
+                <option>Estados Unidos de America</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option checked>Mexico</option>
+                <option>Nigeria</option>
+                <option>Pakistan</option>
+                <option>Rusia</option>
+            </select><br>
+            <label for="genero">Genero: </label>
+            <label>
+                <input id="genero" name="genero" type="radio" value="Femenino">Femenino
+            </label>
+            <label>
+                <input id="genero" name="genero" type="radio" value="Femenino">Masculino
+            </label><br>
+            <label for="intereses" id="etiqueta_intereses">Intereses: </label>
+            <label><br>
+                <input name="intereses" type="checkbox" value="box">Box
+            </label><br>
+            <label>
+                <input name="intereses" type="checkbox" value="gym">Gym
+            </label>
+            <label><br>
+                <input name="intereses" type="checkbox" value="aerobics">Aerobics
+            </label>
+            <label><br>
+                <input name="intereses" type="checkbox" value="baloncesto">Baloncesto
+            </label>
+            <label><br>
+                <input name="intereses" type="checkbox" value="esgrima">Esgrima
+            </label>          
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Validar numeros telefonicos</h2>
+        <form id="f4">
+            <label for="telefono">Telefono: </label>
+            <input id="telefono" type="tel" pattern="[0-9]{10}" 
+            placeholder="2020202020" autocomplete="tel" required
+            title="Ingrese 10 digitos sin espacios ni guion.">
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Subida de archivos</h2>
+        <form id="f5">
+            <label for="imagen">Sube tu imagen aqui: </label>
+            <input id="imagen" name="imagen" type="file">
+            <br>
+            <label>Sube tu documento PDF aqui: </label>
+            <input id="documento" name="documento" type="file">
+        </form>
+    </div><br><hr>
+
+
+    <div>
+        <h2>Personalizacion con colores</h2>
+        <form id="f6">
+            <label>Selecciona el color: </label>
+            <input id="color" name="color" type="color" value="#FFEBCD">
+        </form>
+        <label for="satisfaccion">Selecciona el nivel de satisfaccion: </label>
+        <input id="satisfaccion" name="satisfaccion" type="range" min="0" max="10" step="1" value="5" list="dat">
+        <datalist id="dat">
+            <option value="0" label="0"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            <option value="6" label="6"></option>
+            <option value="7" label="7"></option>
+            <option value="8" label="8"></option>
+            <option value="9" label="9"></option>
+            <option value="10" label="10"></option>
+        </datalist>
+    </div><br><hr>
+
+    <div>
+        <h2>Reservacion de citas</h2>
+        <p>Para reservar tu cita ingresa la fecha y hora deseada.</p>
+        <form id="f7">
+            <label for="fecha">Fecha: </label>
+            <input id="fecha" name="fecha" type="date"><br>
+            <label for="hora">Hora: </label>
+            <input id="hora" name="hora" type="time">
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Formulario de ingreso al sistema</h2>
+        <form id="f8">
+            <label for="correo_electronico">Correo electronico: </label>
+            <input id="correo_electronico" name="correo_electronico" type="email" placeholder="tunombre@ejemplo.com"><br>
+            <label for="nueva_contrasena">Contrasena: </label>
+            <input id="nueva_contrasena" name="nueva_contrasena" type="password">
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Registro de eventos</h2>
+        <form id="f9">
+            <label for="evento">Nombre del evento: </label>
+            <input id="evento" name="evento" type="text" size="30" title="Escribe el nombre del evento" maxlength="50"><br>
+            <label for="fecha_evento">Fecha: </label>
+            <input id="fecha_evento" name="fecha_evento" type="date"><br>
+            <label for="hora_evento_inicio">Hora de inicio: </label>
+            <input id="hora_evento_inicio" name="hora_evento_inicio" type="time"><br>
+            <label for="hora_evento_fin">Hora de fin: </label>
+            <input id="hora_evento_fin" name="hora_evento_fin" type="time">
+        </form>
+    </div><br><hr>
+
+    <div>
+        <h2>Formulario para comentarios</h2>
+        <form id="f10">
+            <label for="user">Nombre de usuario</label>
+            <input id="user" name="user" type="text" autocomplete
+            pattern="[a-zA-Z]+" title="Solo se permiten letras" required><br>
+            <label for="comments">Comentarios: </label><br>
+            <textarea id="comments" name="comments" type="text" rows="10" cols="50" maxlength="700" placeholder="Deja tu comentario aqui." title="Dejanos tus comentarios." required></textarea><br>
+            <button type="submit" name="Enviar" value="Enviar" form="f10">Enviar</button>
+        </form>
+    </div><br><hr>
+
+    <a href="#inicio">Regresar al inicio</p>
+
+
+</body>
+</html>
